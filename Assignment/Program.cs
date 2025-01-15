@@ -53,15 +53,15 @@ namespace Assignment
 
             #region Q03
 
-            //Recipient recipient = new Recipient("Malak","M@gmail.com");
+            Recipient recipient = new Recipient("Malak", "M@gmail.com");
 
-            //EmailNotificationService EmailService = new EmailNotificationService();
-            //SmsNotificationService SmsService = new SmsNotificationService();
-            //PushNotificationService PushNotificationService = new PushNotificationService();
+            INotificationService EmailService = new EmailNotificationService();
+            INotificationService SmsService = new SmsNotificationService();
+            INotificationService PushNotificationService = new PushNotificationService();
 
-            //EmailService.SendNotification(recipient,"Hello");
-            //SmsService.SendNotification(recipient,"Hello");
-            //PushNotificationService.SendNotification(recipient,"Hello");
+            EmailService.SendNotification(recipient, "Hello");
+            SmsService.SendNotification(recipient, "Hello");
+            PushNotificationService.SendNotification(recipient, "Hello");
 
             #endregion
 
